@@ -1,0 +1,35 @@
+//  ==========================================================================
+//  Global style import Master File
+//  ==========================================================================
+
+    @import "mixins/*";
+    @import 'base/global';
+    @import 'base/variables';
+    @import 'base/settings';
+    @import 'base/fonts';
+    @import 'base/icon-font';
+
+    @import 'foundation';
+    @include foundation-global-styles;
+    @include foundation-flex-classes;
+    @include foundation-flex-grid;
+    @include foundation-typography;
+    @include foundation-visibility-classes;
+
+//  ==========================================================================
+//  Vendor, from Bower and Vendor
+//  ==========================================================================
+
+//  ==========================================================================
+//  Elements - such as heading, buttons, nav, footer
+//  ==========================================================================
+
+    @import 'slick.scss';
+    @import 'jquery.fancybox.scss';
+
+    //@import 'elements/*.scss';
+    @import 'components/**/*.scss';
+    @import 'layouts/**/*.scss';
+    @import 'modules/**/*.scss';
+    @import 'pages/**/*.scss';
+    @import 'utilities/**/*.scss';

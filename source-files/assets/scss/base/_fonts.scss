@@ -1,0 +1,50 @@
+// BebasNeue.eot
+// BebasNeue.ttf
+// BebasNeue.woff
+// BebasNeueBold.eot
+// BebasNeueBold.ttf
+// BebasNeueBold.woff
+// BebasNeueBook.eot
+// BebasNeueBook.ttf
+// BebasNeueBook.woff
+// BebasNeueLight.eot
+// BebasNeueLight.ttf
+// BebasNeueLight.woff
+// BebasNeueRegular.eot
+// BebasNeueRegular.ttf
+// BebasNeueRegular.woff
+// BebasNeueThin.eot
+// BebasNeueThin.ttf
+// BebasNeueThin.woff
+
+@include font-face("Bebas Neue", '../assets/fonts/BebasNeue', null, null, eot ttf woff);
+@include font-face("Bebas Neue Bold", '../assets/fonts/BebasNeueBold', null, null, eot ttf woff);
+@include font-face("Bebas Neue Book", '../assets/fonts/BebasNeueBook', null, null, eot ttf woff);
+@include font-face("Bebas Neue Light", '../assets/fonts/BebasNeueLight', null, null, eot ttf woff);
+@include font-face("Bebas Neue Regular", '../assets/fonts/BebasNeueRegular', null, null, eot ttf woff);
+@include font-face("Bebas Neue Thin", '../assets/fonts/BebasNeueThin', null, null, eot ttf woff);
+
+
+.bebas-neue{
+  font-family: "Bebas Neue", "Helvetica", sans-serif;
+}
+
+.bebas-neue-bold{
+  font-family: "Bebas Neue Bold", "Helvetica", sans-serif;
+}
+
+.bebas-neue-book{
+  font-family: "Bebas Neue Book", "Helvetica", sans-serif;
+}
+
+.bebas-neue-light{
+  font-family: "Bebas Neue Light", "Helvetica", sans-serif;
+}
+
+.bebas-neue-regular{
+  font-family: "Bebas Neue Regular", "Helvetica", sans-serif;
+}
+
+.bebas-neue-thin{
+  font-family: "Bebas Neue Thin", "Helvetica", sans-serif;
+}

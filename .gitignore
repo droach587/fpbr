@@ -1,0 +1,5 @@
+wp-config.php
+.htaccess
+node_modules*
+../../../uploads/
+uploads*

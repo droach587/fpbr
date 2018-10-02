@@ -1,0 +1,60 @@
+@font-face {
+  font-family: "custom-icon-font";
+  src: url('../assets/fonts/icons/custom-icon-font.eot');
+  src: url('../assets/fonts/icons/custom-icon-font.eot?#iefix') format('embedded-opentype'),
+    url('../assets/fonts/icons/custom-icon-font.woff') format('woff'),
+    url('../assets/fonts/icons/custom-icon-font.ttf') format('truetype'),
+    url('../assets/fonts/icons/custom-icon-font.svg#custom-icon-font') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.i-lg {
+  font-size: 1.3333333333333333em;
+  line-height: 0.75em;
+  vertical-align: -15%;
+}
+.i-2x { font-size: 2em; }
+.i-3x { font-size: 3em; }
+.i-4x { font-size: 4em; }
+.i-5x { font-size: 5em; }
+.i-fw {
+  width: 1.2857142857142858em;
+  text-align: center;
+}
+
+.i-attitudes-icon:before, .i-audience-icon:before, .i-auto-icon:before, .i-branded-icon:before, .i-broad-icon:before, .i-campaign-icon:before, .i-check-icon:before, .i-close-icon:before, .i-commercial-icon:before, .i-content-icon:before, .i-culture-icon:before, .i-data-icon:before, .i-demo-icon:before, .i-footer-fb:before, .i-footer-twitter:before, .i-location-icon:before, .i-partnerships-icon:before, .i-qsr-icon:before, .i-reach-icon:before, .i-retail-icon:before, .i-search-icon:before, .i-talent-icon:before, .i-target-icon:before,  .icons-i:before { display: inline-block;
+  font-family: "custom-icon-font";
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-variant: normal;
+  text-transform: none;
+  text-decoration: inherit; 
+}
+
+.i-attitudes-icon:before { content: "\EA01" }
+.i-audience-icon:before { content: "\EA02" }
+.i-auto-icon:before { content: "\EA03" }
+.i-branded-icon:before { content: "\EA04" }
+.i-broad-icon:before { content: "\EA05" }
+.i-campaign-icon:before { content: "\EA06" }
+.i-check-icon:before { content: "\EA07" }
+.i-close-icon:before { content: "\EA08" }
+.i-commercial-icon:before { content: "\EA09" }
+.i-content-icon:before { content: "\EA0A" }
+.i-culture-icon:before { content: "\EA0B" }
+.i-data-icon:before { content: "\EA0C" }
+.i-demo-icon:before { content: "\EA0D" }
+.i-footer-fb:before { content: "\EA0E" }
+.i-footer-twitter:before { content: "\EA0F" }
+.i-location-icon:before { content: "\EA10" }
+.i-partnerships-icon:before { content: "\EA11" }
+.i-qsr-icon:before { content: "\EA12" }
+.i-reach-icon:before { content: "\EA13" }
+.i-retail-icon:before { content: "\EA14" }
+.i-search-icon:before { content: "\EA15" }
+.i-talent-icon:before { content: "\EA16" }
+.i-target-icon:before { content: "\EA17" }
