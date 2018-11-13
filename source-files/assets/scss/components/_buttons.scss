@@ -1,0 +1,73 @@
+.btn{
+  @extend .bebas-neue-bold;
+  border-radius: 40px;
+  border: 2px solid $brand-blue;
+  padding: 1.3rem 3rem .87rem 3rem;
+  font-size: 1.6rem;
+  color: black;
+  transition-duration: .2s;
+  transition-property: all;
+  position: relative;
+  display: inline-block;
+  margin-bottom: .5rem;
+  & + & { margin-left: 1rem; }
+  &:hover{ color: white; background: $brand-blue; }
+  width: 100%;
+  @include breakpoint(medium up){
+    width: auto;
+  }
+  &--small{
+    font-size: 1rem;
+    padding: .7rem 2rem .5rem 2rem;
+    & + & { margin-left: .5rem;}
+  }
+  &--xsmall{
+    font-size: .6rem;
+    font-family: "Helvetica", sans-serif;
+    color: #666;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border: 1px solid #666;
+    padding: .6rem 1rem .4rem 1rem;
+    min-width: 140px;
+    text-align: center;
+    &:hover{
+      border-color: $brand-blue;
+    }
+  }
+}
+
+.btn--white{
+  color: white;
+  border-color: white;
+  &:hover{
+    background: white;
+    color: $brand-light-blue;
+  }
+}
+
+.btn--text{
+  border: none;
+  color: $brand-blue;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  &::after{
+    width: 80%;
+    margin: auto;
+    height: 1px;
+    display: inline-block;
+    position: absolute;
+    left:0;
+    right:0;
+    border-top: 1px solid rgba(black, .5);
+    bottom: .4rem;
+    transition-duration: .2s;
+    transition-property: all;
+    content: '';
+  }
+  &:hover{
+    background: transparent;
+    color: $black;
+    &::after{ border-color: $brand-blue; }
+  }
+}

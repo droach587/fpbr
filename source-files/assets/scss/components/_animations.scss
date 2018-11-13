@@ -1,0 +1,12 @@
+.animated{
+  filter: blur(10px);
+  transition-duration: .7s;
+  transition-timing-function: ease-out;
+  transform: translateY(100px);
+  opacity: 0;
+  &.isAnimated{
+    filter: blur(0px);
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}

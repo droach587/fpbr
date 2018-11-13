@@ -1,0 +1,71 @@
+.hgroup{
+  $gp: &;
+  &__heading{
+    color: $brand-blue;
+    font-size: 4.5rem;
+    @extend .bebas-neue-bold;
+    .nobold{
+      @extend .bebas-neue-book;
+    }
+    &--light{
+      @extend .bebas-neue-book;
+      strong {
+        @extend .bebas-neue-bold;
+      }
+    }
+    &--no-pad{ margin-bottom: 0; padding: 0;}
+    &--med { font-size: 3rem; }
+    &--small { font-size: 1.8rem; }
+    &--med + #{$gp}__cta{ padding-top: 0; }
+  }
+  &__subheading{
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: -.5px;
+  }
+  &__cta{
+    padding: 2rem 0;
+    &--flush{ padding-bottom: 0; }
+    @include breakpoint(small down){
+      .btn{
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+  &--inv{
+    #{$gp}__heading, #{$gp}__subheading, p{
+      color: white;
+    }
+  }
+  &--dark{
+    #{$gp}__heading, #{$gp}__subheading, p{
+      color: #333;
+      small{ color: #333; }
+    }
+  }
+  &__menu{
+    margin: 0;
+    padding: 0;
+    li{
+      display: inline-block;
+      @include breakpoint(small down){
+        width: 100%;
+        margin: .2rem 0;
+      }
+    }
+    @include breakpoint(medium up){
+      li + li { margin-left: .5rem; }
+    }
+  }
+}
+
+@keyframes blinking {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% {opacity: 1;}
+}
+
+.blinking{
+  animation: blinking 2s infinite;
+}

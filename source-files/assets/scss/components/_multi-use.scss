@@ -1,0 +1,45 @@
+.multi-use{
+  padding: 8rem 0 3rem 0;
+  @include breakpoint(medium up){
+    padding: 3rem 0;
+  }
+}
+
+.mu{
+  $gp: &;
+  &__quote{
+    position: relative;
+    p:not(#{$gp}__quote-byline){
+      @extend .bebas-neue-book;
+      color: $brand-blue;
+      font-size: 2rem;
+      line-height: 1.8rem;
+      @include breakpoint(medium up){
+        font-size: 3.8rem;
+        line-height: 3.4rem;
+      }
+      margin: 0;
+      padding: 0;
+      &::before{
+        content: '“';
+        font-size: 4rem;
+        font-weight: 600;
+        font-family: "Times New Roman", "Times", serif;
+        position: absolute;
+        top:0;
+        left:-50px;
+        color: #666;
+      }
+    }
+  }
+  &__quote-byline{
+    color: #777;
+    font-size: 1rem;
+    margin-top: 1rem;
+    @include breakpoint(medium up){
+      font-size: 2rem;
+      margin-top: 1.5rem;
+    }
+    @extend .bebas-neue-bold;
+  }
+}

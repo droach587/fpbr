@@ -21,28 +21,67 @@ add_theme_support('post-thumbnails');
 // add_image_size('hero-large', 1440, 640, false); //true is hard crop mode
 // add_image_size('product-featured-image', 560, 560, false); //true is hard crop mode
 
-//
-// add_filter('image_size_names_choose', 'wpshout_custom_sizes');
-// function wpshout_custom_sizes($sizes)
-// {
-//     return array_merge($sizes, array(
-//       'map-thumbnail' => __('Map Thumbnail'),
-//     ));
-// }
-
-
-/*
-	Register Nav Menus
- */
-
 function registerMenus() {
- // register_nav_menu('main-navigation',__( 'Main Navigation' ));
- // register_nav_menu('footer-brands',__( 'Footer Brands' ));
- // register_nav_menu('footer-legal',__( 'Footer Legal' ));
+ register_nav_menu('main-navigation',__( 'Main Navigation' ));
+ register_nav_menu('about-pages-navigation',__( 'About Pages Navigation' ));
+ register_nav_menu('footer-nav-col-one',__( 'Footer Nav Col One' ));
+ register_nav_menu('footer-nav-col-two',__( 'Footer Nav Col Two' ));
+ register_nav_menu('footer-nav-col-three',__( 'Footer Nav Col Three' ));
 }
 
 add_action( 'init', 'registerMenus' );
 
+function arphabet_widgets_init() {
+
+	register_sidebar(array(
+		'name'          => 'Footer Social',
+		'id'            => 'footer_social',
+		'before_widget' => '',
+		'after_widget'  => '',
+		'before_title'  => '<span class="hidden">',
+		'after_title'   => '</span>',
+	));
+
+  register_sidebar(array(
+		'name'          => 'Footer Copyright',
+		'id'            => 'footer_copyright',
+		'before_widget' => '',
+		'after_widget'  => '',
+		'before_title'  => '<span class="hidden">',
+		'after_title'   => '</span>',
+	));
+
+}
+
+add_action( 'widgets_init', 'arphabet_widgets_init' );
+
+function scrapeImage($text) {
+    $pattern = '/src=[\'"]?([^\'" >]+)[\'" >]/';
+    preg_match($pattern, $text, $link);
+    $link = $link[1];
+    $link = urldecode($link);
+    return $link;
+
+}
+
+
+function get_all_custom_post($type, $ppp = '3000', $cn = '', $order = 'DESC', $exclude = ''){
+
+    $args = array(
+        'post_type'=>$type,
+        'posts_per_page'=> $ppp,
+        'order'=>$order,
+        'orderby'=>'date',
+        'category_name' => $cn,
+        'post_status'=>'publish',
+        'post__not_in' => array($exclude),
+    );
+    $myposts = get_posts( $args );
+
+    return $myposts;
+
+    wp_reset_postdata();
+}
 
 /*-----------------------------------------------------------------------------------*/
 /* Enqueue Styles and Scripts

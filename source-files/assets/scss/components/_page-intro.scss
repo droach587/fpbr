@@ -1,0 +1,22 @@
+.page-intro{
+  padding-top: 4rem;
+  padding-bottom: 8rem;
+  @include breakpoint(medium up){
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+  }
+  p{
+    font-size: 1rem;
+    line-height: 2rem;
+  }
+  strong{
+    color: $brand-blue;
+  }
+  &--depth{
+    padding-bottom: 8rem;
+  }
+  .aligncenter{
+    margin: auto;
+    display: block;
+  }
+}

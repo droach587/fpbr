@@ -84,7 +84,7 @@ gulp.task('webpack', () => {
             'moment' : path.resolve('node_modules', 'moment/moment.js'),
             'fancy' : path.resolve('node_modules', 'fancybox/dist/js/jquery.fancybox.pack.js'),
             'fancy-media' : path.resolve('node_modules', 'fancybox/dist/helpers/js/jquery.fancybox-media.js'),
-            'waypoints' : path.resolve('node_modules', 'waypoints/lib/jquery.waypoints.js')
+            'waypoints' : path.resolve('node_modules', 'waypoints/lib/noframework.waypoints.js')
           }
         }
       }, webpack)
