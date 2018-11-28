@@ -5,7 +5,7 @@
     </div>
     <div class="columns xsmall-24 medium-expand text-left medium-text-right">
       <div class="hgroup hgroup--dark">
-        <h4 class="hgroup__heading hgroup__heading--small hgroup__heading--no-pad">The Original Futurist<span class="blinking">_</span></h4>
+        <h4 class="hgroup__heading hgroup__heading--small hgroup__heading--no-pad">The Original Futurist</h4>
       </div>
     </div>
   </div>

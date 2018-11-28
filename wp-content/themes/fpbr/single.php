@@ -15,6 +15,7 @@
 <?php
   $featured_image = wp_get_attachment_image_url( get_post_thumbnail_id($post->ID), 'full', 'post');
   $suppressMeta = get_field('suppress_article_meta', $post->ID);
+  $overideAuthor = get_field('override_author', $post->ID);
   $fullWidth = get_field('full_width', $post->ID);
 ?>
 
@@ -58,16 +59,29 @@
 ?>
 
 <?php if(!$suppressMeta): ?>
-  <div class="row page__row page__row--author align-middle">
-    <div class="columns shrink">
-      <div class="author__image" style="background-image: url(<?= scrapeImage($avatar); ?>);"></div>
+  <?php if(!$overideAuthor): ?>
+    <div class="row page__row page__row--author align-middle">
+      <div class="columns shrink">
+        <div class="author__image" style="background-image: url(<?= scrapeImage($avatar); ?>);"></div>
+      </div>
+      <div class="columns text-left">
+        <p>
+          By <?= ucfirst($fname); ?> <?= ucfirst($lname); ?> | <?= get_field('article_date', $post->ID); ?> | Read Time: <?= get_field('article_read_time', $post->ID); ?>
+        </p>
+      </div>
     </div>
-    <div class="columns text-left">
-      <p>
-        By <?= ucfirst($fname); ?> <?= ucfirst($lname); ?> | <?= get_field('article_date', $post->ID); ?> | Read Time: <?= get_field('article_read_time', $post->ID); ?>
-      </p>
+  <?php else: ?>
+    <div class="row page__row page__row--author align-middle">
+      <div class="columns shrink">
+        <div class="author__image" style="background-image: url(<?= get_field('author_image', $post->ID); ?>);"></div>
+      </div>
+      <div class="columns text-left">
+        <p>
+          By <?= get_field('author_name', $post->ID); ?> | <?= get_field('article_date', $post->ID); ?> | Read Time: <?= get_field('article_read_time', $post->ID); ?>
+        </p>
+      </div>
     </div>
-  </div>
+  <?php endif; ?>
 <?php endif; ?>
 
 

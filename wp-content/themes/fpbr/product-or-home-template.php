@@ -87,7 +87,7 @@
 
   <div class="row expanded timeline__footer" style="background-repeat: no-repeat; background-image: url(<?= $timeline_footer_img; ?>); background-color: <?= $timeline_footer_color; ?>;">
     <div class="columns text-center hgroup">
-      <h2 class="hgroup__heading animated"><?= $timeline_footer_hero; ?><span class="blinking">_</span></h2>
+      <h2 class="hgroup__heading animated"><?= $timeline_footer_hero; ?></h2>
       <div class="hgroup__cta animated">
         <?php foreach($timeline_footer_ctas as $footer_cta): ?>
           <?php $text_button = ($footer_cta['text_link']) ? 'btn--text' : false; ?>

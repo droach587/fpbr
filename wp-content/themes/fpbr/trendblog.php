@@ -42,6 +42,24 @@
 
 
 <div class="news news--inline">
+  <div class="row collapse align-middle align-justify">
+    <div class="columns xsmall-24 medium-expand text-right">
+      <ul class="hgroup__menu">
+        <li>
+          Filter Articles:
+        </li>
+        <li>
+          <a class="btn btn--xsmall" href="#">filter by trend</a>
+        </li>
+        <li>
+          <a class="btn btn--xsmall" href="#">filter by date</a>
+        </li>
+        <li>
+          <a class="btn btn--xsmall" href="#">filter by type</a>
+        </li>
+      </ul>
+    </div>
+  </div>
   <div class="row news-grid">
     <div class="news-grid__grid">
       <?php if(!empty(get_all_custom_post('trendblog', 1, 'Upcoming Events'))): ?>
